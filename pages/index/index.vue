@@ -8,7 +8,8 @@
 </template>
 
 <script>
-	import { usrInfos } from "../../servers/apis/user"
+	import { usrInfos } from "@/servers/apis/user"
+	import {pluginFun} from "@/utils/plugin.js"
 	export default {
 		data() {
 			return {
@@ -23,7 +24,9 @@
 			}
 		},
 		onLoad() {
-			this.login()
+			// this.login()
+			this.$toast('这是挂载在vue上的toast')
+			pluginFun()
 		}
 	}
 </script>
